@@ -5,10 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Document</title>
 </head>
+<style>
+
+
+
+
+/* creating css loader */
+
+#loading {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #9c41f2;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+#loading.display {
+    visibility: visible;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+</style>
 <body>
-    <h1>hello world</h1>
-    <p>added p tag</p>
-    <p>another p tag</p>
+
+    
+
+    <div class="container"style="height:100vh;">
+
+        <h1>covid 19 Tracker</h1>
+        <br>
+        <form  id="formdata">
+            <div class="form-group-row">
+    
+                <div class="col-md-6">
+                    <input type="text" placeholder ="enter country name" name="countryname" id="searchcountry" class="form-control">
+                </div>
+
+                <div class="col-md-2 mt-2">    
+                <input type="submit" value="search country" class="form-control btn btn-amber">
+                </div>
+    
+            </div>
+            
+        </form>
+        <h2 id="countryname" class="display-1 text-center"></h2>
+        <div id="loading"></div>
+        <div id="result" class=" mx-auto d-lg-inline-flex">
+          
+        </div>
+
+    </div>
+   
+    
 </body>
+<script src="./app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </html>
